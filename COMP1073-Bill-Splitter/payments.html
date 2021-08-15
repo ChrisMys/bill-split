@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+
+        <div class="navigation">
+            <ul>
+                <li class="list">
+                    <b></b>
+                    <b></b>
+                    <a href="index.html">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <b></b>
+                    <b></b>
+                    <a href="billsplit.html">
+                        <span class="icon"><ion-icon name="logo-usd"></ion-icon></span>
+                        <span class="title">Bill Split</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <b></b>
+                    <b></b>
+                    <a href="tipcalc.html">
+                        <span class="icon"><ion-icon name="calculator-outline"></ion-icon></span>
+                        <span class="title">Tip Calculator</span>
+                    </a>
+                </li>
+                <li class="list active">
+                    <b></b>
+                    <b></b>
+                    <a href="payments.html">
+                        <span class="icon"><ion-icon name="card-outline"></ion-icon></span>
+                        <span class="title">My Payments</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <b></b>
+                    <b></b>
+                    <a href="groups.html">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Groups</span>
+                    </a>
+                </li>
+
+                <section>
+                    <p><a href="https://github.com/ChrisMys/COMP1073-Bill-Splitter" target="_blank"><ion-icon name="logo-github"></ion-icon></a></p>
+                </section>
+
+            </ul>
+        </div>
+
+    </header>
+
+    <div class="pg-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <fieldset>
+                        <form class="payments-section" action="#">
+
+                            <div class="form-group">
+                                <label for="bill_amount">Amount Paid</label>
+                                <input type="text" id="amount-paid">
+                            </div>
+
+                            <div class="form-group" id="tip-bill-amount">
+                                <label for="bill_amount">Date Paid</label>
+                                <input type="date" id="date-paid" name="Date Paid" min="2020-01-01" max="2021-12-31">
+                            </div>
+
+                            <div class="form-group" id="tip-bill-amount">
+                                <label for="bill_amount">Establishment</label>
+                                <input type="text" id="establishment">
+                            </div>
+
+                            <div class="form-group">
+                                <button id="payment-submit" type="submit">Submit</button>
+                            </div>
+                              
+                        </form>
+                    </fieldset>
+
+                    <fieldset>
+                        <ul class="userInfo">
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                            <li>
+                                <span id="user-amount">$0.00</span>
+                                <span id="user-date">01/01/2021</span>
+                                <span id="user-establishment">Restaraunt Name</span>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<!-- Script needed for trhe navigation icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<!-- Main javascript files -->
+<script src="js/billsplit.js"></script>
+<script src="js/groups.js"></script>
+<script src="js/payment.js"></script>
+<script src="js/tipcalc.js"></script>
+    
+</body>
+</html>
