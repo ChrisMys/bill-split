@@ -31,12 +31,16 @@ body {
   top: 0px;
   left: 0px;
   bottom: 0px;
-  width: 250px;
+  width: 70px;
   background: var(--foreground-clr);
   border-left: 5px solid var(--foreground-clr);
   box-sizing: initial;
   transition: width 0.5s;
   overflow-x: hidden;
+}
+
+.navigation.active {
+  width: 250px;
 }
 
 .navigation ul {
