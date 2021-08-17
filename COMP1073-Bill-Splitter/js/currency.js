@@ -28,8 +28,7 @@ async function currency() {
   // input thats not in focus with the apporopriate arithmetic that corresponds to the currency value
   // that was chosen from the drop downs
   function currencyConversion(a, b) {
-    input[a].value =
-      (input[b].value * rates[select[a].value]) / rates[select[b].value];
+    input[a].value = (input[b].value * rates[select[a].value]) / rates[select[b].value];
   }
 
   // These are the event listeners that will call the above function with the predefined indexes of the

@@ -83,12 +83,12 @@
 
                             <div class="form-group">
                                 <label for="bill_amount">Amount Paid</label>
-                                <input type="text" id="amount-paid">
+                                <input type="text" id="amount_paid">
                             </div>
 
                             <div class="form-group" id="tip-bill-amount">
                                 <label for="bill_amount">Date Paid</label>
-                                <input type="date" id="date-paid" name="Date Paid" min="2020-01-01" max="2021-12-31">
+                                <input type="text" id="date_paid" placeholder="01/01/79">
                             </div>
 
                             <div class="form-group" id="tip-bill-amount">
@@ -97,45 +97,18 @@
                             </div>
 
                             <div class="form-group">
-                                <button id="payment-submit" type="submit">Submit</button>
+                                <p class="text-center"><a id="payment_submit" href="#">Submit</a></p>
                             </div>
+
+                            <div class="text-center" id="payment_error" style="color: red"></div>
                               
                         </form>
                     </fieldset>
 
                     <fieldset>
-                        <ul class="userInfo">
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                            <li>
-                                <span id="user-amount">$0.00</span>
-                                <span id="user-date">01/01/2021</span>
-                                <span id="user-establishment">Restaraunt Name</span>
-                            </li>
-                        </ul>
+
+                        <ul class="userInfo" id="payment_list"></ul>
+
                     </fieldset>
                 </div>
             </div>
@@ -154,11 +127,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <!-- Main javascript files -->
-<script src="js/main.js"></script>
-<script src="js/billsplit.js"></script>
-<script src="js/groups.js"></script>
 <script src="js/payment.js"></script>
-<script src="js/tipcalc.js"></script>
     
 </body>
 </html>
