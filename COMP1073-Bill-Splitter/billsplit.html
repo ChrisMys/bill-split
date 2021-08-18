@@ -89,11 +89,11 @@
                             <div class="form-group" id="tip">
                                 <label>Leave a tip?</label>
                                 <label for="html">($)</label>
-                                <input type="radio" onclick="if(this.checked){tipAmount()}" name="leave_tip" value="($)">
+                                <input id="amount" type="radio" onclick="if(this.checked){tipAmount()}" name="leave_tip" value="($)">
                                 <label for="css">(%)</label>
-                                <input type="radio" onclick="if(this.checked){tipPercent()}" name="leave_tip" value="CSS">
+                                <input id="percent" type="radio" onclick="if(this.checked){tipPercent()}" name="leave_tip" value="CSS">
                                 <label for="javascript">No Tip</label>
-                                <input type="radio" onclick="if(this.checked){noTip()}" name="leave_tip" value="JavaScript">
+                                <input id="notTip" type="radio" onclick="if(this.checked){noTip()}" name="leave_tip" value="JavaScript">
                             </div>
 
                             <div class="form-group tip-amount" id="tip-amount">
@@ -109,9 +109,9 @@
                             <div class="form-group" id="group">
                                 <label>Pick your group</label>
                                 <label for="html">New Group</label>
-                                <input type="radio" onclick="if(this.checked){newGroup()}" name="group_select" value="new">
+                                <input id="new" type="radio" onclick="if(this.checked){newGroup()}" name="group_select" value="new">
                                 <label for="css">Existing Group</label>
-                                <input type="radio" onclick="if(this.checked){oldGroup()}" name="group_select" value="existing">
+                                <input id="existing" type="radio" onclick="if(this.checked){oldGroup()}" name="group_select" value="existing">
                             </div>
 
                             <div class="form-group new-group" id="new-group">
@@ -121,7 +121,7 @@
 
                             <div class="form-group old-group" id="old-group">
                                 <label for="existing_group">Group Name</label>
-                                <select name="existing_group" id="group_select">
+                                <select name="existing_group" id="group_select" onchange="selectedGroup()">
                                     <option value="default">Choose your group...</option>
                                     <option value="friends">Friends</option>
                                     <option value="family">Family</option>
@@ -131,40 +131,16 @@
                             </div>
 
                             <div class="form-group">
-                                <button id="bill-submit" type="submit">Submit</button>
+                                <button id="bill-submit" type="button" onclick="calculateSplit()">Submit</button>
                             </div>
                               
                         </form>
                     </fieldset>
                 </div>
                 <div class="col-sm-6">
-                    <fieldset>
+                    <fieldset id="groupDetails">
                         <ul class="userInfo">
-                            <li>
-                                <ion-icon name="logo-usd"></ion-icon>
-                                Jason Auger
-                                <span>$0.00</span>
-                            </li>
-                            <li>
-                                <ion-icon name="logo-usd"></ion-icon>
-                                Chris Bolt
-                                <span>$0.00</span>
-                            </li>
-                            <li>
-                                <ion-icon name="logo-usd"></ion-icon>
-                                Kenil Satishbhai Gajera
-                                <span>$0.00</span>
-                            </li> 
-                            <li>
-                                <ion-icon name="logo-usd"></ion-icon>
-                                Radhen Khant
-                                <span>$0.00</span>
-                            </li>
-                            <li>
-                                <ion-icon name="logo-usd"></ion-icon>
-                                Cameron Mcinnes
-                                <span>$0.00</span>
-                            </li>           
+
                         </ul>
                     </fieldset>
                 </div>
@@ -186,9 +162,6 @@
 <!-- Main javascript files -->
 <script src="js/main.js"></script>
 <script src="js/billsplit.js"></script>
-<script src="js/groups.js"></script>
-<script src="js/payment.js"></script>
-<script src="js/tipcalc.js"></script>
     
 </body>
 </html>

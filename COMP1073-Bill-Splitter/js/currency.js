@@ -1,3 +1,7 @@
+/*
+    Author Chris Bolt
+*/
+
 const select = document.querySelectorAll("select");
 const input = document.querySelectorAll("input");
 const API_URL =

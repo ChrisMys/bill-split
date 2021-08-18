@@ -1,3 +1,7 @@
+/*
+	Author: Radhen Khant
+*/
+
 const billAmount = document.querySelector("#bill_amount");
 const submitButton = document.querySelector("#tip-submit");
 submitButton.addEventListener("click", function (event)

@@ -446,7 +446,7 @@ fieldset {
 
 .groups-section .form-group {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .groups-section .form-group select,
@@ -464,4 +464,12 @@ fieldset {
 
 .text-center {
   text-align: center;
+}
+
+@media (max-width: 1199px) {
+
+  .pg-section {
+    padding: 40px 90px;
+  }
+
 }
