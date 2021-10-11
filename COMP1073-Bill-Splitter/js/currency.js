@@ -4,8 +4,7 @@
 
 const select = document.querySelectorAll("select");
 const input = document.querySelectorAll("input");
-const API_URL =
-  "https://v6.exchangerate-api.com/v6/462d97c906775392bc3f15b9/latest/USD";
+const API_URL = "https://v6.exchangerate-api.com/v6/462d97c906775392bc3f15b9/latest/USD";
 let html = "";
 
 async function currency() {
@@ -22,6 +21,8 @@ async function currency() {
   arrKeys.map((item) => {
     return (html += `<option value=${item}>${item}</option>`);
   });
+
+  console.log(html);
 
   // Using a foreach loop we will assign each of the mapped values to our select drop down menus
   for (let i = 0; i < select.length; i++) {
